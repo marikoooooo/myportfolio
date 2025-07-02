@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Title 2 - Your Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="page-transition">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Your Name</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="resume.html" class="nav-link">Resume</a>
+                </li>
+                <li class="nav-item">
+                    <a href="daedalus-studios.html" class="nav-link">Daedalus Studios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Back to Projects -->
+    <section class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-content fade-in">
+                <a href="projects.html" class="back-link">← Back to Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div class="container">
+            <div class="project-hero-content fade-in">
+                <h1 class="project-title">Project Title 2</h1>
+                <p class="project-subtitle">Another exciting project showcasing different skills</p>
+                <div class="project-tech-main">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Express</span>
+                </div>
+                <div class="project-links-main">
+                    <a href="#" class="btn btn-primary">Live Demo</a>
+                    <a href="#" class="btn btn-secondary">View Code</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <div class="container">
+            <div class="project-content">
+                <div class="project-details fade-in">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This is your second project showcase. Replace this content with details about 
+                        your actual project. What makes this project special? What problem does it solve?
+                    </p>
+                    <p>
+                        Describe the user experience, the technical challenges, and what you're most 
+                        proud of in this particular project.
+                    </p>
+
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <h3>Development Time</h3>
+                            <p>4-6 weeks</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Team Size</h3>
+                            <p>2-3 people</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Project Type</h3>
+                            <p>Full-Stack App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-image-main fade-in">
+                    <div class="image-placeholder">
+                        <p>Project 2 Screenshot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="project-features">
+        <div class="container">
+            <h2 class="section-title fade-in">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item fade-in">
+                    <h3>User Authentication</h3>
+                    <p>Secure login system with JWT tokens and password encryption.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <h3>Real-time Updates</h3>
+                    <p>Live data synchronization using WebSocket connections.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-first approach ensuring great UX across all devices.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <h3>API Integration</h3>
+                    <p>RESTful API design with comprehensive error handling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="project-technical">
+        <div class="container">
+            <div class="technical-content">
+                <div class="technical-text fade-in">
+                    <h2>Technical Implementation</h2>
+                    <p>
+                        This project demonstrates full-stack development capabilities with a modern 
+                        technology stack and best practices implementation.
+                    </p>
+                    
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li><strong>Frontend:</strong> React, React Router, Axios</li>
+                        <li><strong>Backend:</strong> Node.js, Express.js, JWT</li>
+                        <li><strong>Database:</strong> MongoDB with Mongoose ODM</li>
+                        <li><strong>Tools:</strong> Git, Postman, MongoDB Compass</li>
+                    </ul>
+
+                    <h3>Architecture Decisions</h3>
+                    <p>
+                        Explain why you chose this particular tech stack and how the different 
+                        components work together.
+                    </p>
+                </div>
+
+                <div class="code-snippet fade-in">
+                    <h3>API Endpoint Example</h3>
+                    <div class="code-block">
+                        <pre><code>// Express route with authentication
+app.get('/api/users/:id', authenticateToken, async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery -->
+    <section class="project-gallery">
+        <div class="container">
+            <h2 class="section-title fade-in">Project Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-in">
+                    <div class="image-placeholder">
+                        <p>Login Page</p>
+                    </div>
+                    <p>User authentication interface</p>
+                </div>
+                <div class="gallery-item fade-in">
+                    <div class="image-placeholder">
+                        <p>Dashboard</p>
+                    </div>
+                    <p>Main application dashboard</p>
+                </div>
+                <div class="gallery-item fade-in">
+                    <div class="image-placeholder">
+                        <p>Mobile View</p>
+                    </div>
+                    <p>Responsive mobile interface</p>
+                </div>
+                <div class="gallery-item fade-in">
+                    <div class="image-placeholder">
+                        <p>Admin Panel</p>
+                    </div>
+                    <p>Administrative controls</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="other-projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Other Projects</h2>
+            <div class="other-projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="image-placeholder">Project 1</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Title 1</h3>
+                        <p>Brief description of your first project...</p>
+                        <a href="project-1.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <div class="image-placeholder">Project 3</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Project Title 3</h3>
+                        <p>Brief description of another project...</p>
+                        <a href="project-3.html" class="project-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="projects.html" class="btn btn-primary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
