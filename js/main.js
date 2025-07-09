@@ -144,67 +144,7 @@ function initSmoothScrolling() {
     });
 }
 
-// ========================================
-// Blog Functions (for Daedalus Studios)
-// ========================================
-function loadBlogPosts() {
-    fetch('data/blog-posts.json')
-        .then(response => response.json())
-        .then(data => {
-            renderBlogPosts(data.posts);
-        })
-        .catch(error => {
-            console.error('Error loading blog posts:', error);
-            // Show fallback content
-            const blogContainer = document.getElementById('blog-posts-container');
-            if (blogContainer) {
-                blogContainer.innerHTML = '<p>Unable to load blog posts at this time.</p>';
-            }
-        });
-}
 
-function renderBlogPosts(posts) {
-    const blogContainer = document.getElementById('blog-posts-container');
-    
-    if (!blogContainer) return;
-    
-    // Sort posts by date (newest first)
-    posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-    
-    const blogHTML = posts.map(post => `
-        <article class="blog-card fade-in">
-            <div class="blog-image">
-                ${post.images && post.images.length > 0 
-                    ? `<img src="images/${post.images[0]}" alt="${post.title}" loading="lazy">`
-                    : '<div class="image-placeholder">Blog Post</div>'
-                }
-            </div>
-            <div class="blog-content">
-                <h3>${post.title}</h3>
-                <p class="blog-date">${formatDate(post.date)}</p>
-                <p class="blog-excerpt">${post.excerpt}</p>
-                ${post.tags ? `<div class="blog-tags">${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>` : ''}
-                <button class="btn btn-secondary" onclick="openBlogPost(${post.id})">Read More</button>
-            </div>
-        </article>
-    `).join('');
-    
-    blogContainer.innerHTML = blogHTML;
-    
-    // Re-initialize fade animations for new content
-    initFadeInAnimations();
-}
-
-function openBlogPost(postId) {
-    // This would typically open a modal or navigate to a detailed post page
-    // For now, we'll show an alert (you can enhance this later)
-    alert(`Opening blog post #${postId}. This feature can be enhanced with a modal or separate page.`);
-}
-
-function formatDate(dateString) {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString('en-US', options);
-}
 
 // ========================================
 // Contact Form (if needed)
@@ -287,9 +227,4 @@ function isInViewport(element) {
     );
 }
 
-// ========================================
-// Initialize Blog on Daedalus Studios Page
-// ========================================
-if (window.location.pathname.includes('daedalus-studios.html')) {
-    document.addEventListener('DOMContentLoaded', loadBlogPosts);
-} 
+ 
